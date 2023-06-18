@@ -6,6 +6,16 @@
   "engines": {
     "vscode": "^1.79.0"
   },
+  "publisher": "raja-jaganathan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RajaJaganathan/smartjscodeactions.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/RajaJaganathan/smartjscodeactions",
+  "bugs": {
+    "url": "https://github.com/RajaJaganathan/smartjscodeactions/issues"
+  },
   "keywords": [
     "visual studio code",
     "extension",
@@ -23,7 +33,9 @@
     "onCommand:smartjscodeactions.transformToObject",
     "onCodeAction",
     "onLanguage:javascript",
-    "onLanguage:typescript"
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact"
   ],
   "main": "./out/extension.js",
   "contributes": {
