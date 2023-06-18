@@ -1,71 +1,65 @@
-# smartjscodeactions README
+# SmartJSCodeActions
 
-This is the README for your extension "smartjscodeactions". After writing up a brief description, we recommend including the following sections.
+SmartJSCodeActions is a powerful Visual Studio Code extension that provides code actions to transform JavaScript and TypeScript objects to maps and vice versa.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Transform Object to Map: Convert JavaScript and TypeScript objects to `Map` data structure.
 
-For example if there is an image subfolder under your extension project workspace:
+- Transform Map to Object: Convert `Map` data structure to JavaScript and TypeScript objects.
 
-\!\[feature X\]\(images/feature-x.png\)
+## Usage
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. Select the JavaScript or TypeScript code containing an object you want to transform.
 
-## Requirements
+2. Use the code action menu (lightbulb icon) or the keyboard shortcut to trigger the available code actions.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+3. Choose the desired code action from the list: "Transform Object to Map" or "Transform Map to Object".
 
-## Extension Settings
+4. The code action will automatically transform the selected code and update it with the transformed version.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Examples
 
-For example:
+### Transform Object to Map
 
-This extension contributes the following settings:
+```javascript
+const person = {
+  name: "John Doe",
+  age: 30,
+  email: "johndoe@example.com",
+  address: {
+    street: "123 Main Street",
+    city: "New York",
+    state: "NY",
+    zip: "10001"
+  },
+  hobbies: ["reading", "playing guitar", "traveling"],
+  isActive: true
+};
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+// Select the above code and trigger the "Transform Object to Map" code action.
+```
 
-## Known Issues
+### Transform Map to Object
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+```javascript
+const person = new Map([
+  ["name", "John Doe"],
+  ["age", 30],
+  ["email", "johndoe@example.com"],
+  [
+    "address",
+    new Map([
+      ["street", "123 Main Street"],
+      ["city", "New York"],
+      ["state", "NY"],
+      ["zip", "10001"],
+    ]),
+  ],
+  ["hobbies", ["reading", "playing guitar", "traveling"]],
+  ["isActive", true],
+]);
 
-## Release Notes
+// Select the above code and trigger the "Transform Object to Map" code action.
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+```
