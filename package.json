@@ -2,7 +2,7 @@
   "name": "smartjscodeactions",
   "displayName": "Smart JavaScript Code Actions",
   "description": "A collection of smart code actions for JavaScript development in Visual Studio Code.",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.79.0"
   },
@@ -12,6 +12,7 @@
     "url": "https://github.com/RajaJaganathan/smartjscodeactions.git"
   },
   "license": "MIT",
+  "icon": "assets/images/icon.png",
   "homepage": "https://github.com/RajaJaganathan/smartjscodeactions",
   "bugs": {
     "url": "https://github.com/RajaJaganathan/smartjscodeactions/issues"
